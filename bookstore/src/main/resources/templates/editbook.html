@@ -18,6 +18,13 @@
 			<input type="text" th:field="*{author}" />
 			<div style="clear: both; display: block; height: 10px;"></div> 
 			
+			
+			<div style="clear: both; display: block; height: 10px;"></div>						
+		  	<label for="catlist">Category</label>
+			 <select id="catlist" th:field="*{category}" class="form-control">
+       			<option th:each="category: ${category}" th:value="${category.categoryid}" th:text="${category.name}"></option>
+    		</select> 
+			
 			<input type="submit" value="Päivitä"></input> 	   	
 		</form>
 	</div> 
